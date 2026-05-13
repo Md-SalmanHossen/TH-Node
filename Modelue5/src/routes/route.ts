@@ -17,7 +17,7 @@ export const routeHandler = (req : IncomingMessage ,res : ServerResponse)=>{
 
    }else {
       
-      res.writeHead(404,{"content-type":"text/plain"});
+      res.writeHead(404,{"content-type":"application/json"});
       res.end("route not found")
    }
 
