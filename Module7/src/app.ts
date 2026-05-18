@@ -1,6 +1,7 @@
 import express, { type Application ,type Request,type Response } from 'express';
-import { pool } from './db';
 import { userRoute } from './modules/user/user.route';
+import { profileRoute } from './modules/profile/profile.route';
+import { authRoute } from './modules/auth/auth.route';
 
 const app : Application = express();
 
@@ -10,6 +11,7 @@ app.use(express.urlencoded({extended:true}));
 
 
 app.use('/api/users',userRoute);
-
+app.use('/api/profile',profileRoute);
+app.use("/api/auth",authRoute);
 
 export default app;
