@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import config  from "../../configs/index";
 
 const loginUserIntoDB =async(payload : {email :string, password:string})=>{
-   const {email,password}=payload;
+   const {email,password} = payload;
    
    //check if the user exists
    //compare the password
